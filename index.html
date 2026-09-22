@@ -2,12 +2,165 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/friendship.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wbesties</title>
+    <title>W-Besties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <div class="banner">
+        <div>
+            <img class="logo" src="/friendship.png">
+            W-Besties
+        </div>
+        <div class="options">
+            <div>About Us</div>
+            <div class="big-button">Take the test</div>
+        </div>
+    </div>
+    <div class="container1">
+        <h1>Your next hire should be more than just a coworker</h1>
+        <div>A personality screening tool to find your work besties</div>
+        <div class="main">
+            <div class="pitch">
+                <div>The personalities on your team can make all the difference.</div>
+                <div>W-Besties helps businesses improve productivity, reduce turnover, and increase morale.</div>
+            </div>
+            <img src="/office.jpg">
+        </div>
+    </div>
+    <div class="container2">
+        <h1>Hear from happy teams</h1>
+        <div class="testimonials">
+            <div class="testimony">
+                <p>
+                    Hiring is always a difficult decision, and a bad hire can really derail your team. 
+                    W-Besties gave me insight into how a hire might interact with everyone and 
+                    helped me make better decisions for the team.
+                </p> 
+                <br>
+                <div>- Sam </div>
+            </div>
+            <div class="testimony">
+                <p>
+                    We've got a large team with many different personalities, 
+                    so being able to get along and collaborate with everyone is a must for any prospective hire.
+                    W-Besties helped us tremendously in finding the right candidate.
+                </p>
+                <br>
+                <div>- Julie </div>
+            </div>
+            <div class="testimony">
+                <p>
+                    W-Besties helped us find the perfect person to be our 3rd co-founder. 
+                    We bounce ideas off each other so well, and it's made us all much more productive. 
+                </p>
+                <br>
+                <div>- Brent & Peter, twins </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+<style>
+    body {
+        background-color: floralwhite;
+    }
+    .container1 {
+        padding: 16px 6vw;
+        background-color: skyblue;
+        h1 {
+            padding-bottom: 8px;
+        }
+    }
+    .container2 {
+        padding: 16px 6vw;
+    }
+    h1 {
+        font-family: sans-serif;
+        font-size: xx-large;
+        padding: 16px 0px;
+        margin: 0;
+    }
+    div {
+        font-family: Montserrat;
+    }
+    .testimonials {
+        display: flex;
+        gap: 16px;
+        padding: 0px 2vw;
+    }
+    .testimony {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 2px solid darkblue;
+        border-radius: 8px;
+        padding: 16px;
+        font-size: x-large;
+        gap: 8px;
+        p {
+            font-style: italic;
+        }
+        div {
+            text-align: end;
+            font-weight: bolder; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+    .pitch {
+        padding: 8px 0px;
+        font-size: xx-large;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 32px;
+        padding: 32px;
+        height: 100%;
+        line-height: 1.4;
+        font-weight: 550;
+    }
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        font-size: xx-large;
+        font-weight: bold;
+        align-items: end;
+        gap: 16px;
+        padding: 16px 96px;
+        border-bottom: 2px solid black;
+    }
+    .logo {
+        height: 48px;
+    }
+    .options {
+        font-size: large;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 16px;
+        div {
+            transition: box-shadow 0.2s;
+        }
+        div:hover {
+            box-shadow: 0px 2px gray;
+            cursor: pointer;
+            color: black;
+        }
+    }
+    .big-button {
+        border: 1px solid darkblue;
+        border-radius: 32px;
+        padding: 8px 16px;
+        background-color: white;
+    }
+    .main {
+        display: flex;
+        img {
+            border: 2px solid darkblue;
+        }
+    }
+</style>
