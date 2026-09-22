@@ -10,7 +10,7 @@ export default defineConfig({
   },
   input: {
     main: resolve(import.meta.dirname, 'index.html'),
-    luominai: resolve(import.meta.dirname, 'luominai/index.html'),
+    corporate: resolve(import.meta.dirname, 'corporate/index.html'),
   },
   plugins: [react()],
 })
