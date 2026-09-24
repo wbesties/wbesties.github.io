@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Guide</title>
+  </head>
+  <body>
+    <div class="box">
+      - I am a div. <br>
+      - I am included as part of the index.html file. <br>
+      - I am static. <br>
+    </div>
+    <div class="box" id="root">
+      - I am a div with id="root" <br>
+      - I am included as part of the index.html file <br>
+      - When main.tsx is linked to this html file, my contents are overriden <br>
+      - I am the root of a react app, and main.tsx is my entry point. <br>
+      <button id="link1">
+        Link main.tsx
+      </button>
+    </div>
+  </body>
+  <script>
+    document.getElementById("link1")
+      .addEventListener(("click"), (e) => {
+        const script = document.createElement("script")
+        script.setAttribute("src", "./src/main.tsx")
+        script.setAttribute("type", "module")
+        document.getElementsByTagName("body")[0].appendChild(script)
+      })
+  </script>
+</html>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .box {
+    border: 1px solid black;
+    line-height: 1.4;
+    padding: 16px;
+  }
+</style>

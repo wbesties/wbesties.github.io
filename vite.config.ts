@@ -11,7 +11,9 @@ export default defineConfig({
   input: {
     main: resolve(import.meta.dirname, 'index.html'),
     corporate: resolve(import.meta.dirname, 'corporate/index.html'),
-    loss: resolve(import.meta.dirname, 'loss/index.html')
+    loss: resolve(import.meta.dirname, 'loss/index.html'),
+    personality: resolve(import.meta.dirname, 'personality/index.html'),
+    tutorial: resolve(import.meta.dirname, 'tutorial/index.html')
   },
   plugins: [react()],
 })
