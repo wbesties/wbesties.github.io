@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="modulepreload" href="src/main.tsx"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Guide</title>
   </head>
@@ -23,12 +24,10 @@
     </div>
   </body>
   <script>
+  
     document.getElementById("link1")
       .addEventListener(("click"), (e) => {
-        const script = document.createElement("script")
-        script.setAttribute("src", "./src/main.tsx")
-        script.setAttribute("type", "module")
-        document.getElementsByTagName("body")[0].appendChild(script)
+        import("./src/main.tsx")
       })
   </script>
 </html>
