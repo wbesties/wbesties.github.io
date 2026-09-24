@@ -11,6 +11,7 @@ export default defineConfig({
   input: {
     main: resolve(import.meta.dirname, 'index.html'),
     corporate: resolve(import.meta.dirname, 'corporate/index.html'),
+    loss: resolve(import.meta.dirname, 'loss/index.html')
   },
   plugins: [react()],
 })
