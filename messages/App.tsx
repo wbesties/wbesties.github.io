@@ -158,7 +158,7 @@ function Message({ fragments, onFragClick, selectedIndex }: MessageProps) {
         </div>
       </div>
       <div ref={ref}>
-        {fragments.map((frag, i) =>
+        {fragments.map((_, i) =>
           <span
             key={i}
             style={{
