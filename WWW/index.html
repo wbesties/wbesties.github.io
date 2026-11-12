@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/index.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WWW</title>
+  </head>
+  <body>
+    <div class="header">
+      Wbesties Website Writeups
+    </div>
+    I love you flavor foley files
+    <div class="container">
+      <a class="entry" href="./messages/">
+        <img src="../src/assets/file.svg">
+        <div class="description">Messages</div>
+      </a>
+    </div>
+  </body>
+</html>
+
+<style>
+body {
+  max-width: 568px;
+  margin: auto;
+  padding: 1rem;
+  height: 100vh;
+}
+.header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.entry {
+  padding: 4px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    filter: grayscale(1) contrast(0%) brightness(10000);
+    margin: auto;
+    width: 60%;
+    height: 60%;
+  }
+  .description {
+    text-align: center;
+    font-weight: lighter;
+  }
+}
+</style>

@@ -128,7 +128,7 @@ function Message({ fragments, onFragClick, selectedIndex }: MessageProps) {
         textIndex = 0
       }
       // Recurse
-      const delay = [",", ".", ":", ";"].includes(char) ? 500 : 1000 / 16 / (fragment.rate ?? 1)
+      const delay = [",", ".", ":", ";", "!", "?"].includes(char) ? 500 : 1000 / 16 / (fragment.rate ?? 1)
       timeoutId = setTimeout(nextChar, delay)
     }
     nextChar()

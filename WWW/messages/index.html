@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/index.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WWW</title>
+  </head>
+  <body>
+    <h1>
+      Inspiration
+    </h1>
+    <p>
+      A while ago I wrote a bit of React code for a component that displayed text with a typewriter effect, 
+      and even longer before that, I tried to copy the Pokemon TCG Pocket card carousel.
+    </p>
+    <p>
+      Both projects involved integrating regular JS DOM manipulation with React. This is because React puts a 
+      limit on how frequently you can re-render a component before it gives up. This is for performance reasons.
+    </p>
+    <p>
+      I was inspired by those youtube videos with a guy reading a tumblr post where they slowly reveal the post as they go. 
+      I could just read the post myself, but the added pacing was pretty fun. Cadence really adds a lot to a text.
+    </p>
+    <p>
+      I've also been hit with the Verity brainrot and the line of "Hey, it's me, it's Verity" just wormed itself into my brain
+      for a few days.
+    </p>
+    <p>
+      That all led to me making an interface for the typewriter component. 
+      It was also fun to design the UI because it's so minimal. 
+      I've been practicing gesture drawing, and I'm trying be more intentional with my lines.
+      I thought to carry that idea over into making this app.
+    </p>
+    <h1>
+      Implementation
+    </h1>
+    <p>
+      Each message consists of multiple fragments. Each fragment has text, a rate, and an endDelay
+    </p>
+    <p>
+      The rate is a multiplier to the base speed of 16 chars/s. 
+      If the rate is Infinity, then the entire text displays instantly.
+      In code, the rate is a divisor to the base delay of 1000ms. 
+    </p>
+    <p>
+      When typing out certain punctuation like . , ! ? there is a flat delay of 500ms instead.
+      This delay only applies if the text is displayed one at a time (aka when rate is not Infinity)
+    </p>
+    <p>
+      endDelay only affects fragments with a rate of Infinity. 
+      It is measured in ms and adds a delay after displaying the whole fragment
+    </p>
+    <p>
+      When a message is rendered, it first renders an empty span for each of its fragments.
+      Then a useEffect hook grabs the div containing those spans and starts adding characters.
+      A recursive function gets the next char and the span it should go in, then adds that char to the span's innerHTML.
+      The function recurses using setTimeout, which allows for a delay between calls.
+    </p>
+    <p>
+      I added a reload button to redisplay the message you made. It works by adding a state variable foo 
+      to the useEffect hook's list of dependencies. When the value of foo is changed, the hook calls its cleanup function
+      (which clears the text inside the spans), then runs the typewriter code again.
+    </p>
+  </body>
+</html>
+
+<style>
+body {
+  max-width: 568px;
+  margin: auto;
+  padding: 1rem;
+}
+</style>

@@ -10,12 +10,10 @@ export default defineConfig({
   },
   input: {
     main: resolve(import.meta.dirname, 'index.html'),
-    corporate: resolve(import.meta.dirname, 'corporate/index.html'),
-    loss: resolve(import.meta.dirname, 'loss/index.html'),
-    personality: resolve(import.meta.dirname, 'personality/index.html'),
-    tutorial: resolve(import.meta.dirname, 'tutorial/index.html'),
     site: resolve(import.meta.dirname, 'site/index.html'),
-    messags: resolve(import.meta.dirname, 'messages/index.html')
+    messages: resolve(import.meta.dirname, 'messages/index.html'),
+    messages_WWW: resolve(import.meta.dirname, 'WWW/messages/index.html'),
+    WWW: resolve(import.meta.dirname, 'WWW/index.html'),
   },
   plugins: [react()],
 })
